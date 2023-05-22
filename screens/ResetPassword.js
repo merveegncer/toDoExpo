@@ -4,6 +4,7 @@ import React from 'react';
 import InlineTextButton from '../components/InlineTextButton';
 import { auth } from '../firebase';
 import { sendPasswordResetEmail } from 'firebase/auth';
+import Login from './Login';
 
 export default function ResetPassword({navigation}) {
   const ocean_background = require("../assets/ocean_background.jpg")
@@ -12,7 +13,7 @@ export default function ResetPassword({navigation}) {
   let ResetPassword=()=>{
       sendPasswordResetEmail(auth, email)
       .then(() => {
-      navigation.popTotop();
+      navigation.navigate(Login);
       })
       .catch((error) => {
         setErrorMessage(error.message)
@@ -40,7 +41,7 @@ export default function ResetPassword({navigation}) {
           </View>
   
     
-          <Button title='Reset'color={"#6564DB"}/>
+          <Button title='Reset'onPress={ResetPassword} color={"#6564DB"}/>
        
 
       </View> 
