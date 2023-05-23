@@ -1,3 +1,9 @@
+
+// navigation ile gezinme islemleri gercekler
+//sign up basildiginda let signUp gidiyo satir39 listTODo ya geciyor
+
+
+
 import { Text, View, ImageBackground, TextInput, Button} from 'react-native';
 import AppStyles from '../styles/AppStyles';
 import React from 'react';
@@ -24,11 +30,13 @@ export default function SignUp({navigation}) {
     setValue(value);
   };
 
+
+
   let SignUp=()=>{
     if(Password === confirmPassword){
       createUserWithEmailAndPassword(auth, email, Password).then((userCredential) => {
         sendEmailVerification(auth.currentUser);
-        navigation.navigate(ListToDo, {user: userCredential.user});
+        navigation.navigate("ListToDo", {user: userCredential.user});
       })
 
       .catch((error) => {
@@ -41,6 +49,7 @@ export default function SignUp({navigation}) {
 
   return (
     <ImageBackground style={AppStyles.container}source={ocean_background}>
+
       <View style={AppStyles.backgroundCover}>
         <Text style={[AppStyles.lightText , AppStyles.Headers]}>Sign Up</Text>
 

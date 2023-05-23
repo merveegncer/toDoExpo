@@ -8,19 +8,37 @@ export default StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    containerPadding:{
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 30
+    },
 
     rowContainer:{
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: 1
+        marginVertical: 1,
+        alignSelf:"stretch",
+        marginHorizontal: 8
     },
+
+    rightAligned:{
+        justifyContent: "flex-end"
+    },
+    rightMargin:{
+        marginRight:16
+    },
+
     topMargin:{
         marginTop: 8
     },
     bottomMargin:{
         marginBottom: 16
     },
+
 
     backgroundCover: {
         alignSelf: 'stretch',
@@ -48,6 +66,9 @@ export default StyleSheet.create({
     },
     lightTextInput:{
         borderBottomColor: "#ffffff"
+    },
+    darkTextInput:{
+        borderBottomColor: "#00000"
     },
     fontsize:{
         fontSize:17
