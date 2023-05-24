@@ -1,11 +1,14 @@
 
+// lgin onpress(login) let logine gidiyo ora firebase sifre email kontrolunden sonra listToDoya geciyor 
+
+
 import { Text, View, ImageBackground, TextInput, Button} from 'react-native';
 import AppStyles from '../styles/AppStyles';
 import React from 'react';
 import InlineTextButton from '../components/InlineTextButton';
 import ResetPassword from './ResetPassword';
-import {auth, currentUser } from '../firebase';
-import {signInWithEmailAndPassword } from "firebase/auth";
+import {auth } from '../firebase';
+import {signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import ListToDo from "./ListToDo";
 
 export default function Login({navigation}) { 
@@ -14,6 +17,14 @@ export default function Login({navigation}) {
 
   if(auth.currentUser){
     navigation.navigate("ListToDo")
+  }else{
+    //otomatik giris yapmak icin
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+       navigation.navigate("ListToDo");
+      } 
+    });
+    
   }
 
   
