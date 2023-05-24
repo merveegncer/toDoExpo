@@ -19,11 +19,22 @@ export default StyleSheet.create({
     rowContainer:{
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        alignSelf:'stretch',
+        justifyContent: 'space-between',
         marginVertical: 1,
-        alignSelf:"stretch",
-        marginHorizontal: 8
+        justifyContent: 'space-between',
+        marginHorizontal: 0,
     },
+    containerForTodos:{
+        flex:1,
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        marginVertical: 1,
+        backgroundColor: "red",
+        justifyContent: "flex-end"
+    },
+
+
 
     rightAligned:{
         justifyContent: "flex-end"
