@@ -22,7 +22,7 @@ export default StyleSheet.create({
         alignSelf:'stretch',
         justifyContent: 'space-between',
         marginVertical: 1,
-        justifyContent: 'space-between',
+        
         marginHorizontal: 0,
     },
     containerForTodos:{

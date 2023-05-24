@@ -1,3 +1,9 @@
+//cancel tikladiignda listtododaki onClose fonksiyonu calisiyo. 
+// <AddTODoModal/> listToDO da kullanildigi icin props.onclose diyiince listtododaki addtodomodal icindeki fonksiyon calisiyo. props o.
+// props.addtodo(todo) listtododaki addoto fonksiyonunu cagiriyo todoyu parametre olarak gonderiyo.
+
+
+
 import { Modal } from "react-native-web";
 import { View, Text, TextInput, Button } from "react-native";
 import React from "react";

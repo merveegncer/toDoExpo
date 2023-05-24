@@ -1,3 +1,9 @@
+
+
+// olusturulan screenler tanimlaniyor.
+
+
+
 import { StatusBar } from 'expo-status-bar';
 import Login from './screens/Login';
 import { NavigationContainer } from '@react-navigation/native';
