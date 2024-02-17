@@ -53,9 +53,9 @@ export default StyleSheet.create({
         fontSize:17
     },
     inlineTextButton:{
-        color:"#89D2DC",
+        color:"red",
         fontSize:17,
-    
+
     },
     pressedInlineTextButton:{
         color:"#b2d8d8",
